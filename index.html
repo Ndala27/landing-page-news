@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page  📰Newsletter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <dialog class="modal_enviar" >
+        <div class="modal_content">
+            <p class="modal_msg_sucesso">E-mail cadastrado com <span class="sucesso">sucesso</span></p>
+            <p class="modal_msg_erro">E-mail <span class="erro">não</span> cadastrado</p>
+            <button type="button" class="btn btn_fechar">Fechar</button>
+        </div>
+    </dialog>
+
+    <header>
+         <span class="logo">
+            <a href="#"> Universus</a>
+         </span>
+         <button type="button" class="btn btn_comprar">COMPRAR EBOOK </button>
+    </header>
+
+    <main>
+       <section class="section_content">
+        <h2>Seja bem-vindo a sua melhor newsletter</h2>
+        <h3>Fique por dentro de todas as novidades</h3>
+        <p>
+            Preencha os campos para receber as notícias sobre programação
+        </p>
+        <form action="">
+            <div class="inputs">
+                <label for="nomeId">Nome</label>
+                <input type="text" name="nome" id="nomeId" class="input_nome" autofocus>
+                <span class="erro_nome erro"></span>
+            </div>
+            
+           <div class="inputs">
+                <label for="emailId">Email</label>
+                <input type="email" name="email" id="emailId" class="input_email">
+                <span class="erro_email erro"></span>
+           </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn_enviar">Enviar</button>
+            </div>
+        </form>
+       </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Joe Ndala &copy; 2024 | Inspirado no Desafio do eFront do Iuri code</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/*Decarando variáveis de cores que serão usadas de forma geram no css*/
+:root{
+    --color_green:#04D361;
+    --color_blue:#899BFF;
+    --color_red:#FF3E3E;
+    --color_dark:#0C0C0C;
+    --color_dark_200:#212529;
+    --color_gray:#AEAEAE;
+    --color_light:#F9F9F9;
+    --color_bg:#1a1a1a;
+    --color_bg2:#0a0a0a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    background-image: linear-gradient( to left , var(--color_bg), var(--color_bg2));
+    color: var(--color_light);
+    font-family: Sora, "Inter", DM Sans, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 14px;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 100;
+    color: var(--color_light);
+}
+.btn{
+    width: 190px;
+    height: 60px;
+    border: 0;
+    cursor: pointer;
+}
+.btn_comprar{
+    background-color: transparent;
+    border: 2px solid var(--color_blue);
+    border-radius: 6px;
+    color: var(--color_light);
+    transition: .5s ease;
+}
+.btn_comprar:hover{
+    background-color: var(--color_bg);
+    border: 2px solid var(--color_green);
+    border-radius: 6px;
+    color: var(--color_blue);
+    font-weight: bold;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section_content{
+    width: 600px;
+    height: auto;
+}
+.section_content h2{
+    font-family: Sora, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 50px;
+}
+.section_content h3{
+    font-size: 26px;
+    text-align: center;
+    color: var(--color_blue);
+    font-weight: 500;
+    margin-top: 20px;
+}
+.section_content p{
+    font-size: 18.5px;
+    line-height: 30px;
+    color: var(--color_gray);
+    margin-top: 30px;
+   
+} 
+form{
+    width:100%;
+    height: auto;
+    margin-top: 20px;
+}
+.inputs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+   
+  
+}
+input{
+    height: 60px;
+    border: 1px solid var(--color_dark_200);
+    border-radius: 4px;
+    background-color: var(--color_dark);
+    color: var(--color_gray);
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+label{
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color_gray);
+    padding-left: 2px;
+}
+.btn_enviar{
+    width: 100%;    
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: var(--color_blue);
+    color: var(--color_dark);
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s ease;
+}
+
+.btn_enviar:hover{
+    background-color: var(--color_green);
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color_gray);
+}
+
+/* Formating Box Modal*/
+
+.modal_enviar{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #0C0C0C50;
+}
+.modal_content{
+    width: 800px;
+    height: 300px;
+    background-color: var(--color_dark);
+    color: var(--color_light);
+    border: 1px solid var(--color_dark_200);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /*centralizar modal independente de qual seja a resolução da tela*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal_content p{
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 18px;
+
+}
+.btn_fechar{
+    font-size: 24px;
+    font-weight: bold;
+    width: 600px;
+    background-color: var(--color_green);
+}
+
+.sucesso{
+    color: var(--color_green);
+}
+.erro{
+    color: var(--color_red);
+}
+.bg_sucesso{
+    background-color: var(--color_green);
+}
+.bg_erro{
+    background-color: var(--color_red);
+}
+.erro_nome, .erro_email{
+    line-height: 30px;
+}
+
+/*Responsividade */
+@media (max-width:768px){
+    body,header,form,footer {
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .section_content{
+        width: 100vw;
+        padding-inline: 60px ;
+    }
+    footer{
+        font-size: 16px;
+        padding-inline: 20px;
+        text-align: center;
+    }
+    .modal_content,.btn_fechar{
+        width: 80%;
+    }
+    .btn_fechar{
+        border-radius: 10px;
+    }
+    .btn{
+        font-weight: 300;        
+    }
+}
+
+@media (max-width:512px){
+    header .logo a{
+        font-size:32px;
+    }
+    .section_content{
+        padding-inline: 30px;
+    }
+    .section_content h2{
+         font-size: 40px;
+    }
+    .section_content h3{
+        font-size: 23px;
+    }
+    .section_content p{
+        font-size: 16px;
+    }
+    .btn_fechar p{
+        font-size: 24px;
+        text-align: center;
+    }
+}
+@media (max-width:480px){
+    header .logo a{
+        font-size:28px;
+    }
+    header .btn{
+        width: 167px;
+    }
+    .section_content h2{
+         font-size: 30px;
+    }
+    .section_content h3{
+        font-size: 19px;
+    }
+    .section_content p{
+        font-size: 16px;
+    }
+    .modal_content{
+        width: 100%;
+        height: 100%;
+    }
+   .modal_content p{
+    font-size: 24px;
+    text-align: center;
+   }
+   
+    footer{
+        font-size: 12px;
+    }
+}
+@media (max-width:320px){
+
+    header .logo a{
+        font-size:22px;
+    }
+    header .btn{
+        width: 140px;
+    }
+    
+    .section_content h2{
+         font-size: 26px;
+    }
+    .section_content h3{
+        font-size: 16px;
+    }
+    .section_content p{
+        font-size: 13px;
+    }
+    .modal_content{
+        width: 100%;
+        height: 100%;
+    }
+   .modal_content p{
+    font-size: 20px;
+    text-align: center;
+   }
+   form label {
+    font-size: 13px;
+   }
+   footer{
+    font-size: 10px
+   }
+}
